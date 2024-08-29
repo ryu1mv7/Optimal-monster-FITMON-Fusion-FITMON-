@@ -50,3 +50,10 @@ def fuse(fitmons):
                 if memo[left][right][1] < cuteness_score:
                     memo[left][right] = [affinity_left,cuteness_score,affinity_right]
     return memo[0][n-1][1] # return the cuteness score of all monsters given as a input
+
+if __name__ == "__main__":
+    a = fuse([[0, 30, 0.6],
+[0.6, 20, 0.2],
+[0.2, 90, 0.9],
+[0.9, 50, 0]])
+    print(a) # expect 72
